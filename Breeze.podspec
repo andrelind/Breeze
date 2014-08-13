@@ -3,11 +3,10 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "Breeze"
   s.version      = "0.0.1"
-  s.summary      = "A short description of Breeze."
+  s.summary      = "Breeze is a lightweight CoreData manager written in Swift!"
 
   s.description  = <<-DESC
-                   Breeze is a lightweight CoreData-manager written in Swift!
-                   It's taking a lot of cues from both [MagicalRecord](https://github.com/magicalpanda/MagicalRecord) and [Nimble](https://github.com/MarcoSero/Nimble)
+                   Breeze takes a lot of cues from both [MagicalRecord](https://github.com/magicalpanda/MagicalRecord) and [Nimble](https://github.com/MarcoSero/Nimble)
 
                    * Lightweight and simple to use
                    * 1 row of code to find first/any object in database
