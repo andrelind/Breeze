@@ -42,7 +42,7 @@ Find single objects by attribute
 
 or by predicate
 
-    let car = Car.findFirst(predicate: myPredicate, contextType: BreezeContextType.Main, sortedBy: "anotherAttribute", ascending: false)
+    let car = Car.findFirst(predicate: myPredicate, sortedBy: "anotherAttribute", ascending: false, contextType: BreezeContextType.Main)
 
 
 Likewise, find all objects by attribute
@@ -51,13 +51,13 @@ Likewise, find all objects by attribute
 
 or by predicate
 
-    let cars = Car.findAll(predicate: myPredicate, contextType: BreezeContextType.Main, sortedBy: "anotherAttribute", ascending: false)
+    let cars = Car.findAll(predicate: myPredicate, sortedBy: "anotherAttribute", ascending: false, contextType: BreezeContextType.Main)
 
 ## Counting
 
 If you just need to count the objects of a query, use the countAll function
 
-    let carCount = Car.countAll(predicate: myPredicate, contextType: BreezeContextType.Main, sortedBy: "anotherAttribute", ascending: false)
+    let carCount = Car.countAll(predicate: myPredicate, sortedBy: "anotherAttribute", ascending: false, contextType: BreezeContextType.Main)
 
 ## License
 
