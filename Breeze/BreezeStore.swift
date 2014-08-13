@@ -12,10 +12,21 @@ import CoreData
 private var _breezeStore: BreezeStore!
 
 public class BreezeStore: NSObject {
+    public class func setupInMemoryStore() {
+        setupStoreWithName("InMemoryStore", storeType: NSInMemoryStoreType, options: nil)
+    }
     
-    public class func setupStoreWithName(name: String, type: String, options: Dictionary<NSObject, AnyObject>) {
+    public class func setupDefaultStore() {
+        setupStoreWithName("\(BreezeStore.appName).sqlite", storeType: NSSQLiteStoreType, options: nil)
+    }
+    
+    public class func setupStoreWithName(name: String) {
+        setupStoreWithName(name, storeType: NSSQLiteStoreType, options: nil)
+    }
+    
+    public class func setupStoreWithName(name: String, storeType: String, options: Dictionary<NSObject, AnyObject>?) {
         if _breezeStore == nil {
-            _breezeStore = BreezeStore(name: name, type: type, options: options)
+            _breezeStore = BreezeStore(name: name, storeType: storeType, options: options)
         } else {
             println("Breeze - Store already setup!")
         }
@@ -57,11 +68,15 @@ public class BreezeStore: NSObject {
         _breezeStore = nil
     }
     
+    
+    /*
+        Instance functions and variables
+    */
     let mainContext: NSManagedObjectContext
     let backgroundContext: NSManagedObjectContext
     let persistentStoreCoordinator: NSPersistentStoreCoordinator
     
-    private init(name: String, type: String, options: Dictionary<NSObject, AnyObject>) {
+    private init(name: String, storeType: String, options: Dictionary<NSObject, AnyObject>?) {
         let model = NSManagedObjectModel.mergedModelFromBundles(nil)
         
         persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
@@ -69,7 +84,7 @@ public class BreezeStore: NSObject {
         backgroundContext = NSManagedObjectContext(concurrencyType: .PrivateQueueConcurrencyType)
         
         var error: NSError?
-        let persistentStore = persistentStoreCoordinator.addPersistentStoreWithType(type, configuration: nil, URL: BreezeStore.URLToStoreWithFilename(name), options: options, error: &error)
+        let persistentStore = persistentStoreCoordinator.addPersistentStoreWithType(storeType, configuration: nil, URL: BreezeStore.URLToStoreWithFilename(name), options: options, error: &error)
         
         if error != nil || persistentStore == nil {
             println(error)

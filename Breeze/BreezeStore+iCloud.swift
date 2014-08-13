@@ -26,6 +26,6 @@ extension BreezeStore {
             NSMigratePersistentStoresAutomaticallyOption: true,
             NSInferMappingModelAutomaticallyOption: true
         ]
-        setupStoreWithName(localStoreName, type: NSSQLiteStoreType, options: iCloudOptions)
+        setupStoreWithName(localStoreName, storeType: NSSQLiteStoreType, options: iCloudOptions)
     }
 }

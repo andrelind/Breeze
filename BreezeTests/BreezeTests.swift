@@ -30,6 +30,12 @@ class BreezeTests: XCTestCase {
         
         BreezeStore.setupStoreWithName("Test", type: NSSQLiteStoreType, options: [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true])
         
+        BreezeStore.saveInBackground { contextType -> Void in
+        
+            
+           NSManagedObject.findAll(predicate: NSPredicate(format: "%K = %@", argumentArray: ["myAttribute","myValue"]), contextType: BreezeContextType.Main, sortedBy: "anotherAttribute", ascending: false)
+        }
+        
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(5) * Int64(NSEC_PER_SEC))
         dispatch_after(time, dispatch_get_main_queue(), {
             expectation.fulfill()
@@ -41,7 +47,7 @@ class BreezeTests: XCTestCase {
     func testiCloudStore() {
         let expectation = expectationWithDescription("Wait for setup")
         
-        BreezeStore.setupCloudStoreWithContentNameKey("iCloudTestContentName", localStoreName: "iCloudTest", transactionLogs: "transactions_logs")
+        BreezeStore.setupiCloudStoreWithContentNameKey("iCloudTestContentName", localStoreName: "iCloudTest", transactionLogs: "transactions_logs")
 
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(5) * Int64(NSEC_PER_SEC))
         dispatch_after(time, dispatch_get_main_queue(), {
