@@ -7,17 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4A585BE1998DECD00C3340E /* Breeze-ObjCWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A585BD1998DECD00C3340E /* Breeze-ObjCWrapper.swift */; };
 		B4BEB4AC19972D9800FE828D /* Breeze.h in Headers */ = {isa = PBXBuildFile; fileRef = B4BEB4AB19972D9800FE828D /* Breeze.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4BEB4B619972D9800FE828D /* BreezeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4B519972D9800FE828D /* BreezeTests.swift */; };
+		B4BEB4C019972E2400FE828D /* BreezeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4BF19972E2400FE828D /* BreezeStore.swift */; };
+		B4BEB4C219972FEA00FE828D /* BreezeStore+iCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4C119972FEA00FE828D /* BreezeStore+iCloud.swift */; };
+		B4BEB4C41997697100FE828D /* BreezeStore+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4C31997697100FE828D /* BreezeStore+Defaults.swift */; };
+		B4BEB4C61998C06700FE828D /* NSManagedObjectContext+Breeze.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4C51998C06700FE828D /* NSManagedObjectContext+Breeze.swift */; };
+		B4BEB4C81998C14500FE828D /* BreezeStore+Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4C71998C14500FE828D /* BreezeStore+Saving.swift */; };
+		B4BEB4CA1998D0F600FE828D /* NSManagedObject+Creating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4C91998D0F600FE828D /* NSManagedObject+Creating.swift */; };
+		B4BEB4CC1998D20E00FE828D /* NSManagedObject+Finding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4CB1998D20E00FE828D /* NSManagedObject+Finding.swift */; };
+		B4BEB4CE1998D7DE00FE828D /* NSManagedObject+Deleting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4CD1998D7DE00FE828D /* NSManagedObject+Deleting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B4A585BD1998DECD00C3340E /* Breeze-ObjCWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Breeze-ObjCWrapper.swift"; sourceTree = "<group>"; };
 		B4BEB4A619972D9800FE828D /* Breeze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Breeze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4BEB4AA19972D9800FE828D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4BEB4AB19972D9800FE828D /* Breeze.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Breeze.h; sourceTree = "<group>"; };
 		B4BEB4B119972D9800FE828D /* BreezeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreezeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4BEB4B419972D9800FE828D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4BEB4B519972D9800FE828D /* BreezeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreezeTests.swift; sourceTree = "<group>"; };
+		B4BEB4BF19972E2400FE828D /* BreezeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreezeStore.swift; sourceTree = "<group>"; };
+		B4BEB4C119972FEA00FE828D /* BreezeStore+iCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BreezeStore+iCloud.swift"; sourceTree = "<group>"; };
+		B4BEB4C31997697100FE828D /* BreezeStore+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BreezeStore+Defaults.swift"; sourceTree = "<group>"; };
+		B4BEB4C51998C06700FE828D /* NSManagedObjectContext+Breeze.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Breeze.swift"; sourceTree = "<group>"; };
+		B4BEB4C71998C14500FE828D /* BreezeStore+Saving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BreezeStore+Saving.swift"; sourceTree = "<group>"; };
+		B4BEB4C91998D0F600FE828D /* NSManagedObject+Creating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Creating.swift"; sourceTree = "<group>"; };
+		B4BEB4CB1998D20E00FE828D /* NSManagedObject+Finding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Finding.swift"; sourceTree = "<group>"; };
+		B4BEB4CD1998D7DE00FE828D /* NSManagedObject+Deleting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Deleting.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4A585C11998DF8500C3340E /* Objective-C Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				B4A585BD1998DECD00C3340E /* Breeze-ObjCWrapper.swift */,
+			);
+			name = "Objective-C Wrapper";
+			sourceTree = "<group>";
+		};
 		B4BEB49C19972D9800FE828D = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +86,15 @@
 			isa = PBXGroup;
 			children = (
 				B4BEB4AB19972D9800FE828D /* Breeze.h */,
+				B4BEB4BF19972E2400FE828D /* BreezeStore.swift */,
+				B4BEB4C31997697100FE828D /* BreezeStore+Defaults.swift */,
+				B4BEB4C119972FEA00FE828D /* BreezeStore+iCloud.swift */,
+				B4BEB4C71998C14500FE828D /* BreezeStore+Saving.swift */,
+				B4BEB4C51998C06700FE828D /* NSManagedObjectContext+Breeze.swift */,
+				B4BEB4C91998D0F600FE828D /* NSManagedObject+Creating.swift */,
+				B4BEB4CD1998D7DE00FE828D /* NSManagedObject+Deleting.swift */,
+				B4BEB4CB1998D20E00FE828D /* NSManagedObject+Finding.swift */,
+				B4A585C11998DF8500C3340E /* Objective-C Wrapper */,
 				B4BEB4A919972D9800FE828D /* Supporting Files */,
 			);
 			path = Breeze;
@@ -196,6 +231,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4BEB4C81998C14500FE828D /* BreezeStore+Saving.swift in Sources */,
+				B4BEB4C61998C06700FE828D /* NSManagedObjectContext+Breeze.swift in Sources */,
+				B4BEB4CA1998D0F600FE828D /* NSManagedObject+Creating.swift in Sources */,
+				B4BEB4C219972FEA00FE828D /* BreezeStore+iCloud.swift in Sources */,
+				B4BEB4CC1998D20E00FE828D /* NSManagedObject+Finding.swift in Sources */,
+				B4BEB4CE1998D7DE00FE828D /* NSManagedObject+Deleting.swift in Sources */,
+				B4A585BE1998DECD00C3340E /* Breeze-ObjCWrapper.swift in Sources */,
+				B4BEB4C41997697100FE828D /* BreezeStore+Defaults.swift in Sources */,
+				B4BEB4C019972E2400FE828D /* BreezeStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +342,7 @@
 		B4BEB4BA19972D9800FE828D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -307,12 +352,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B4BEB4BB19972D9800FE828D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -374,6 +421,7 @@
 				B4BEB4BB19972D9800FE828D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4BEB4BC19972D9800FE828D /* Build configuration list for PBXNativeTarget "BreezeTests" */ = {
 			isa = XCConfigurationList;
@@ -382,6 +430,7 @@
 				B4BEB4BE19972D9800FE828D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

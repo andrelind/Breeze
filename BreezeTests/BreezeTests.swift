@@ -8,6 +8,8 @@
 
 import UIKit
 import XCTest
+import Breeze
+import CoreData
 
 class BreezeTests: XCTestCase {
     
@@ -18,19 +20,43 @@ class BreezeTests: XCTestCase {
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        BreezeStore.tearDown()
+        
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testStore() {
+        let expectation = expectationWithDescription("Wait for setup")
+        
+        BreezeStore.setupStoreWithName("Test", type: NSSQLiteStoreType, options: [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true])
+        
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(5) * Int64(NSEC_PER_SEC))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            expectation.fulfill()
+        })
+        
+        waitForExpectationsWithTimeout(10, handler: nil)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+    func testiCloudStore() {
+        let expectation = expectationWithDescription("Wait for setup")
+        
+        BreezeStore.setupCloudStoreWithContentNameKey("iCloudTestContentName", localStoreName: "iCloudTest", transactionLogs: "transactions_logs")
+
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(5) * Int64(NSEC_PER_SEC))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            expectation.fulfill()
+        })
+        
+        waitForExpectationsWithTimeout(10, handler: nil)
     }
+
+    
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measureBlock() {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
     
 }
