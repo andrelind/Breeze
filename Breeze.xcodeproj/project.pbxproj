@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4A585BE1998DECD00C3340E /* Breeze-ObjCWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A585BD1998DECD00C3340E /* Breeze-ObjCWrapper.swift */; };
 		B4BEB4AC19972D9800FE828D /* Breeze.h in Headers */ = {isa = PBXBuildFile; fileRef = B4BEB4AB19972D9800FE828D /* Breeze.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4BEB4B619972D9800FE828D /* BreezeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4B519972D9800FE828D /* BreezeTests.swift */; };
 		B4BEB4C019972E2400FE828D /* BreezeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4BF19972E2400FE828D /* BreezeStore.swift */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B4A585BD1998DECD00C3340E /* Breeze-ObjCWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Breeze-ObjCWrapper.swift"; sourceTree = "<group>"; };
 		B4BEB4A619972D9800FE828D /* Breeze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Breeze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4BEB4AA19972D9800FE828D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4BEB4AB19972D9800FE828D /* Breeze.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Breeze.h; sourceTree = "<group>"; };
@@ -56,14 +54,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B4A585C11998DF8500C3340E /* Objective-C Wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				B4A585BD1998DECD00C3340E /* Breeze-ObjCWrapper.swift */,
-			);
-			name = "Objective-C Wrapper";
-			sourceTree = "<group>";
-		};
 		B4BEB49C19972D9800FE828D = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +84,6 @@
 				B4BEB4C91998D0F600FE828D /* NSManagedObject+Creating.swift */,
 				B4BEB4CD1998D7DE00FE828D /* NSManagedObject+Deleting.swift */,
 				B4BEB4CB1998D20E00FE828D /* NSManagedObject+Finding.swift */,
-				B4A585C11998DF8500C3340E /* Objective-C Wrapper */,
 				B4BEB4A919972D9800FE828D /* Supporting Files */,
 			);
 			path = Breeze;
@@ -237,7 +226,6 @@
 				B4BEB4C219972FEA00FE828D /* BreezeStore+iCloud.swift in Sources */,
 				B4BEB4CC1998D20E00FE828D /* NSManagedObject+Finding.swift in Sources */,
 				B4BEB4CE1998D7DE00FE828D /* NSManagedObject+Deleting.swift in Sources */,
-				B4A585BE1998DECD00C3340E /* Breeze-ObjCWrapper.swift in Sources */,
 				B4BEB4C41997697100FE828D /* BreezeStore+Defaults.swift in Sources */,
 				B4BEB4C019972E2400FE828D /* BreezeStore.swift in Sources */,
 			);

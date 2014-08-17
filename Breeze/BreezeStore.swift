@@ -41,9 +41,9 @@ public class BreezeStore: NSObject {
         }
     }
     
-    public class func executeRequest(request: NSFetchRequest, contextType: BreezeContextType) -> (result: [AnyObject]!, error: NSError?) {
+    public class func executeRequest(request: NSFetchRequest, context: NSManagedObjectContext) -> (result: [AnyObject]!, error: NSError?) {
         var error: NSError?
-        let results = contextForType(contextType).executeFetchRequest(request, error: &error)
+        let results = context.executeFetchRequest(request, error: &error)
         
         if error != nil {
             println("Breeze - Error in fetch request: \(request). Error: \(error)")
@@ -52,9 +52,9 @@ public class BreezeStore: NSObject {
         return (result: results, error: error)
     }
     
-    public class func executeCountRequest(request: NSFetchRequest, contextType: BreezeContextType) -> (count: Int, error: NSError?) {
+    public class func executeCountRequest(request: NSFetchRequest, context: NSManagedObjectContext) -> (count: Int, error: NSError?) {
         var error: NSError?
-        let results = contextForType(contextType).countForFetchRequest(request, error: &error)
+        let results = context.countForFetchRequest(request, error: &error)
         
         if error != nil {
             println("Breeze - Error in fetch request: \(request). Error: \(error)")
