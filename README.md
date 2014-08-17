@@ -15,7 +15,9 @@ Install using Cocoapods
 
     pod "Breeze"
 
-Then import "Breeze.h" into your .pch file
+Then import <Breeze.h/Breeze.h> into your .pch file
+
+    Right now Swift does not work with Cocoapods, so download the files and include them manually... :-(
 
 ## Setup
 
