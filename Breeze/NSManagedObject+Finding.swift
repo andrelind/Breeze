@@ -109,7 +109,7 @@ extension NSManagedObject {
     private class func fetchRequest(predicate: NSPredicate?, sortedBy: String? = nil, ascending: Bool = true) -> NSFetchRequest! {
         let fetchRequest = NSFetchRequest(entityName: NSStringFromClass(self))
         fetchRequest.predicate = predicate
-        fetchRequest.sortDescriptors = sortedBy != nil ? [NSSortDescriptor(key: sortedBy, ascending: ascending)] : nil
+        fetchRequest.sortDescriptors = sortedBy != nil ? [NSSortDescriptor(key: sortedBy!, ascending: ascending)] : nil
         return fetchRequest
     }
 }
