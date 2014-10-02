@@ -79,7 +79,7 @@ public class BreezeStore: NSObject {
     private init(name: String, storeType: String, options: Dictionary<NSObject, AnyObject>?) {
         let model = NSManagedObjectModel.mergedModelFromBundles(nil)
         
-        persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
+        persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: model!)
         mainContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
         backgroundContext = NSManagedObjectContext(concurrencyType: .PrivateQueueConcurrencyType)
         
