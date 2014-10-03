@@ -17,7 +17,7 @@ extension BreezeStore {
         return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first
     }
     
-    class func URLToStoreWithFilename(fileName: String) -> NSURL? {
+    public class func URLToStoreWithFilename(fileName: String) -> NSURL? {
         if let documentDir = documentsDirectory() as? String {
             return NSURL(fileURLWithPath: "\(documentDir)/\(fileName).sqlite")
         }

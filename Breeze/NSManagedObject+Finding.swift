@@ -80,7 +80,12 @@ extension NSManagedObject {
     public class func countAll(predicate: NSPredicate? = nil, sortedBy: String? = nil, ascending: Bool = true, context: NSManagedObjectContext) -> Int {
         let request = fetchRequest(predicate, sortedBy: sortedBy, ascending: ascending)
         request.includesSubentities = false
-        return BreezeStore.executeCountRequest(request, context: context).count
+        
+        let countRequest = BreezeStore.executeCountRequest(request, context: context)
+        if countRequest.error != nil {
+            println("Breeze - Error executing count request: \(countRequest.error)")
+        }
+        return countRequest.count
     }
     
     /*
@@ -109,7 +114,7 @@ extension NSManagedObject {
     private class func fetchRequest(predicate: NSPredicate?, sortedBy: String? = nil, ascending: Bool = true) -> NSFetchRequest! {
         let fetchRequest = NSFetchRequest(entityName: NSStringFromClass(self))
         fetchRequest.predicate = predicate
-        fetchRequest.sortDescriptors = sortedBy != nil ? [NSSortDescriptor(key: sortedBy, ascending: ascending)] : nil
+        fetchRequest.sortDescriptors = sortedBy != nil ? [NSSortDescriptor(key: sortedBy!, ascending: ascending)] : nil
         return fetchRequest
     }
 }
