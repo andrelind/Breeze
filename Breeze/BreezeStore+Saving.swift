@@ -16,7 +16,7 @@ extension BreezeStore {
 //        assert(changes != nil, "Invalid changes")
         let moc = BreezeStore.contextForType(.Main)
         moc.performBlock {
-            changes!(.Main)
+            changes(.Main)
 
             var error: NSError?
             moc.save(&error)
@@ -31,7 +31,7 @@ extension BreezeStore {
 //        assert(changes != nil, "Invalid changes")
         let moc = BreezeStore.contextForType(.Main)
         moc.performBlockAndWait { () -> Void in
-            changes!(.Main)
+            changes(.Main)
 
             var error: NSError?
             moc.save(&error)
@@ -50,7 +50,7 @@ extension BreezeStore {
 //        assert(changes != nil, "Invalid changes")    
         let moc = BreezeStore.contextForType(.Background)
         moc.performBlock { () -> Void in
-            changes!(.Background)
+            changes(.Background)
 
             var error: NSError?
             moc.save(&error)
