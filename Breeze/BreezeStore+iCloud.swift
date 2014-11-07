@@ -16,16 +16,19 @@ extension BreezeStore {
     }
     
     public class func setupiCloudStoreWithContentNameKey(key: String, localStoreName: String, transactionLogs: String) {
-        if iCloudAvailable() == false {
+        if let ubiquityURL = NSFileManager.defaultManager().URLForUbiquityContainerIdentifier(nil) {            
+            let iCloudOptions: Dictionary<NSObject, AnyObject> = [
+                NSPersistentStoreUbiquitousContentNameKey: key,
+                NSPersistentStoreUbiquitousContentURLKey: transactionLogs,
+                NSMigratePersistentStoresAutomaticallyOption: true,
+                NSInferMappingModelAutomaticallyOption: true
+            ]
+            setupStoreWithName(localStoreName, storeType: NSSQLiteStoreType, options: iCloudOptions)
+
+        } else {
             println("Breeze - iCloud not available, using local store instead")
+            setupStoreWithName(localStoreName)
         }
         
-        let iCloudOptions: Dictionary<NSObject, AnyObject> = [
-            NSPersistentStoreUbiquitousContentNameKey: key,
-            NSPersistentStoreUbiquitousContentURLKey: transactionLogs,
-            NSMigratePersistentStoresAutomaticallyOption: true,
-            NSInferMappingModelAutomaticallyOption: true
-        ]
-        setupStoreWithName(localStoreName, storeType: NSSQLiteStoreType, options: iCloudOptions)
     }
 }

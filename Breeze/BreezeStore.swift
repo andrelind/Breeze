@@ -117,7 +117,7 @@ public class BreezeStore: NSObject {
     
     func storesWillChangeHandler(notification: NSNotification) {
         let moc = mainContext
-        moc.performBlockAndWait {
+        moc.performBlock {
             if moc.hasChanges {
                 var error: NSError?
                 moc.save(&error)
@@ -128,9 +128,8 @@ public class BreezeStore: NSObject {
             }
             
             moc.reset()
+            NSNotificationCenter.defaultCenter().postNotificationName(BreezeCloudStoreWillReplaceLocalStore, object: nil)
         }
-        
-        NSNotificationCenter.defaultCenter().postNotificationName(BreezeCloudStoreWillReplaceLocalStore, object: nil)
     }
     
     func storesDidChangeHandler(notification: NSNotification) {

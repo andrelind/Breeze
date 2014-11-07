@@ -19,6 +19,11 @@ extension BreezeStore {
     }
     
     public class func URLToStoreWithFilename(fileName: String) -> NSURL? {
+        // TODO: What if iCloud is available but not used (just wants a local storage...)
+        if let ubiquityURL = NSFileManager.defaultManager().URLForUbiquityContainerIdentifier(nil) {
+            return NSURL(fileURLWithPath: "\(ubiquityURL.path!)/\(fileName).sqlite")
+        }
+        
         if let documentDir = documentsDirectory() as? String {
             return NSURL(fileURLWithPath: "\(documentDir)/\(fileName).sqlite")
         }
