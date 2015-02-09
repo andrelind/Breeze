@@ -10,9 +10,9 @@ import Foundation
 import CoreData
 
 extension NSManagedObject {
-    /*
-        Find in context
-    */
+
+    // MARK: Find in context
+
     public func inContextOfType(type: BreezeContextType) -> AnyObject? {
         if objectID.temporaryID {
             var error: NSError?
@@ -25,9 +25,8 @@ extension NSManagedObject {
         return BreezeStore.contextForType(type).objectWithID(objectID)
     }
     
-    /*
-        Find first
-    */
+    // MARK: Find first
+    
     public class func findFirst(attribute: String? = nil, value: AnyObject?, contextType: BreezeContextType = .Main) -> AnyObject? {
         let predicate = predicateForAttribute(attribute, value: value)
         return findFirst(predicate: predicate, sortedBy: nil, ascending: false, contextType: contextType)
@@ -48,9 +47,8 @@ extension NSManagedObject {
         return BreezeStore.executeRequest(request, context: context).result.first
     }
     
-    /*
-        Find all
-    */
+    // MARK: Find all
+
     public class func findAll(attribute: String? = nil, value: AnyObject?, contextType: BreezeContextType = .Main) -> [AnyObject]! {
         let predicate = predicateForAttribute(attribute, value: value)
         return findAll(predicate: predicate, sortedBy: nil, ascending: false, contextType: contextType)
@@ -70,9 +68,8 @@ extension NSManagedObject {
         return BreezeStore.executeRequest(request, context: context).result
     }
     
-    /*
-        Count
-    */
+    // MARK: Count
+
     public class func countAll(predicate: NSPredicate? = nil, sortedBy: String? = nil, ascending: Bool = true, contextType: BreezeContextType = .Main) -> Int {
         return countAll(predicate: predicate, sortedBy: sortedBy, ascending: ascending, context: BreezeStore.contextForType(contextType))
     }
@@ -88,9 +85,8 @@ extension NSManagedObject {
         return countRequest.count
     }
     
-    /*
-        Fetch all
-    */
+    // MARK: Fetch all
+
     public class func fetchAll(predicate: NSPredicate? = nil, groupedBy: String? = nil, sortedBy: String? = nil, ascending: Bool = true, delegate: NSFetchedResultsControllerDelegate?, contextType: BreezeContextType = .Main) -> NSFetchedResultsController? {
         let request = fetchRequest(predicate, sortedBy: sortedBy, ascending: ascending)
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: BreezeStore.contextForType(contextType), sectionNameKeyPath: groupedBy, cacheName: nil)
@@ -104,9 +100,8 @@ extension NSManagedObject {
         return fetchedResultsController
     }
     
-    /*
-        Private area, keep off
-    */
+    // MARK: Private area, keep off
+
     private class func predicateForAttribute(attribute: String?, value: AnyObject?) -> NSPredicate {
         return NSPredicate(format: "%K = %@", argumentArray: [attribute!, value!])
     }

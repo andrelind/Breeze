@@ -11,7 +11,6 @@ import CoreData
 
 extension BreezeStore {
     public class func iCloudAvailable() -> Bool {
-        //return NSFileManager.defaultManager().ubiquityIdentityToken != nil
         return NSFileManager.defaultManager().URLForUbiquityContainerIdentifier(nil) != nil
     }
     

@@ -12,8 +12,10 @@ public typealias BreezeSaveBlock = (BreezeContextType) -> Void
 public typealias BreezeErrorBlock = (NSError?) -> Void
 
 extension BreezeStore {
+    
+    // MARK: Save in Main
+    
     public class func saveInMain(changes: BreezeSaveBlock) {
-//        assert(changes != nil, "Invalid changes")
         let moc = BreezeStore.contextForType(.Main)
         moc.performBlock {
             changes(.Main)
@@ -28,7 +30,6 @@ extension BreezeStore {
     }
 
     public class func saveInMainWaiting(changes: BreezeSaveBlock) {
-//        assert(changes != nil, "Invalid changes")
         let moc = BreezeStore.contextForType(.Main)
         moc.performBlockAndWait { () -> Void in
             changes(.Main)
@@ -41,13 +42,14 @@ extension BreezeStore {
             }
         }
     }
+    
+    // MARK: Save in Background
 
     public class func saveInBackground(changes: BreezeSaveBlock) {
         saveInBackground(changes, completion: nil)
     }
 
     public class func saveInBackground(changes: BreezeSaveBlock, completion: BreezeErrorBlock?) {
-//        assert(changes != nil, "Invalid changes")    
         let moc = BreezeStore.contextForType(.Background)
         moc.performBlock { () -> Void in
             changes(.Background)

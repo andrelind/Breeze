@@ -16,10 +16,6 @@ public class BreezeStore: NSObject {
         setupStoreWithName("InMemoryStore", storeType: NSInMemoryStoreType, options: nil)
     }
     
-    public class func setupDefaultStore() {
-        setupStoreWithName("\(BreezeStore.appName).sqlite", storeType: NSSQLiteStoreType, options: nil)
-    }
-    
     public class func setupStoreWithName(name: String) {
         setupStoreWithName(name, storeType: NSSQLiteStoreType, options: nil)
     }
@@ -68,10 +64,8 @@ public class BreezeStore: NSObject {
         _breezeStore = nil
     }
     
+    // MARK: Instance functions and variables
     
-    /*
-        Instance functions and variables
-    */
     let mainContext: NSManagedObjectContext
     let backgroundContext: NSManagedObjectContext
     let persistentStoreCoordinator: NSPersistentStoreCoordinator
@@ -84,10 +78,14 @@ public class BreezeStore: NSObject {
         backgroundContext = NSManagedObjectContext(concurrencyType: .PrivateQueueConcurrencyType)
         
         var error: NSError?
-        let persistentStore = persistentStoreCoordinator.addPersistentStoreWithType(storeType, configuration: nil, URL: BreezeStore.URLToStoreWithFilename(name), options: options, error: &error)
+        let persistentStore = persistentStoreCoordinator.addPersistentStoreWithType(storeType,
+            configuration: nil,
+            URL: BreezeStore.URLToStoreWithFilename(name, useiCloud: options?[NSPersistentStoreUbiquitousContentNameKey] != nil),
+            options: options,
+            error: &error)
         
         if error != nil || persistentStore == nil {
-            println(error)
+            println("\(error)")
         }
         
         mainContext.persistentStoreCoordinator = persistentStoreCoordinator
