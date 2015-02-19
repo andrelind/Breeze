@@ -15,6 +15,6 @@ extension NSManagedObject {
     }
     
     public class func createInContext(context: NSManagedObjectContext) -> AnyObject {
-        return NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(self), inManagedObjectContext: context) as NSManagedObject
+        return NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(self), inManagedObjectContext: context) as! NSManagedObject
     }
 }

@@ -11,7 +11,7 @@ import CoreData
 
 extension NSManagedObject {
     public func deleteInContextOfType(type: BreezeContextType) {
-        let contextSelf = inContextOfType(type) as NSManagedObject
+        let contextSelf = inContextOfType(type) as! NSManagedObject
         BreezeStore.contextForType(type).deleteObject(contextSelf)
     }
 }

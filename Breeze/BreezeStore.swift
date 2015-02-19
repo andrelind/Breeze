@@ -37,15 +37,14 @@ public class BreezeStore: NSObject {
         }
     }
     
-    public class func executeRequest(request: NSFetchRequest, context: NSManagedObjectContext) -> (result: [AnyObject]!, error: NSError?) {
+    public class func executeRequest<T: NSManagedObject>(request: NSFetchRequest, context: NSManagedObjectContext) -> (result: [T], error: NSError?) {
         var error: NSError?
-        let results = context.executeFetchRequest(request, error: &error)
-        
-        if error != nil {
-            println("Breeze - Error in fetch request: \(request). Error: \(error)")
+        if let results = context.executeFetchRequest(request, error: &error) {
+            return (result: results as! [T], error: nil)
+        } else {
+            println("Breeze - Error in fetch request: \(request). Error: \(error!)")
+            return (result: [], error: error)
         }
-        
-        return (result: results, error: error)
     }
     
     public class func executeCountRequest(request: NSFetchRequest, context: NSManagedObjectContext) -> (count: Int, error: NSError?) {

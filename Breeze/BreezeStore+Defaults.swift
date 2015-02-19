@@ -10,7 +10,7 @@ import Foundation
 
 extension BreezeStore {
     class func appName() -> String {
-        return NSBundle.mainBundle().infoDictionary!["CFBundleDisplayName"] as String
+        return NSBundle.mainBundle().infoDictionary!["CFBundleDisplayName"] as! String
     }
     
     class func documentsDirectory() -> AnyObject? {
