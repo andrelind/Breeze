@@ -24,7 +24,7 @@ extension BreezeStore {
             moc.save(&error)
 
             if error != nil {
-                println("Breeze - Error saving main context: \(error)")
+                println("Breeze - Error saving main context: \(error!)")
             }
         }
     }
@@ -38,7 +38,7 @@ extension BreezeStore {
             moc.save(&error)
 
             if error != nil {
-                println("Breeze - Error saving main context: \(error)")
+                println("Breeze - Error saving main context: \(error!)")
             }
         }
     }
@@ -58,7 +58,7 @@ extension BreezeStore {
             moc.save(&error)
 
             if error != nil {
-                println("Breeze - Error saving background context: \(error)")
+                println("Breeze - Error saving background context: \(error!)")
             }
 
             if completion != nil {

@@ -49,21 +49,21 @@ extension NSManagedObject {
     
     // MARK: - Find all
 
-    public class func findAll(attribute: String? = nil, value: AnyObject?, contextType: BreezeContextType = .Main) -> [AnyObject]! {
+    public class func findAll(attribute: String? = nil, value: AnyObject?, contextType: BreezeContextType = .Main) -> [NSManagedObject] {
         let predicate = predicateForAttribute(attribute, value: value)
         return findAll(predicate: predicate, sortedBy: nil, ascending: false, contextType: contextType)
     }
     
-    public class func findAll(predicate: NSPredicate? = nil, sortedBy: String? = nil, ascending: Bool = true, contextType: BreezeContextType = .Main) -> [AnyObject]! {
+    public class func findAll(predicate: NSPredicate? = nil, sortedBy: String? = nil, ascending: Bool = true, contextType: BreezeContextType = .Main) -> [NSManagedObject] {
         return findAll(predicate: predicate, sortedBy: sortedBy, ascending: ascending, context: BreezeStore.contextForType(contextType))
     }
     
-    public class func findAll(attribute: String? = nil, value: AnyObject?, context: NSManagedObjectContext) -> [AnyObject]! {
+    public class func findAll(attribute: String? = nil, value: AnyObject?, context: NSManagedObjectContext) -> [NSManagedObject] {
         let predicate = predicateForAttribute(attribute, value: value)
         return findAll(predicate: predicate, sortedBy: nil, ascending: false, context: context)
     }
     
-    public class func findAll(predicate: NSPredicate? = nil, sortedBy: String? = nil, ascending: Bool = true, context: NSManagedObjectContext) -> [AnyObject]! {
+    public class func findAll(predicate: NSPredicate? = nil, sortedBy: String? = nil, ascending: Bool = true, context: NSManagedObjectContext) -> [NSManagedObject] {
         let request = fetchRequest(predicate, sortedBy: sortedBy, ascending: ascending)
         return BreezeStore.executeRequest(request, context: context).result
     }
