@@ -27,21 +27,21 @@ extension NSManagedObject {
     
     // MARK: - Find first
     
-    public class func findFirst(attribute: String? = nil, value: AnyObject?, contextType: BreezeContextType = .Main) -> Self? {
+    public class func findFirst(attribute: String? = nil, value: AnyObject?, contextType: BreezeContextType = .Main) -> NSManagedObject? {
         let predicate = predicateForAttribute(attribute, value: value)
         return findFirst(predicate: predicate, sortedBy: nil, ascending: false, contextType: contextType)
     }
     
-    public class func findFirst(predicate: NSPredicate? = nil, sortedBy: String? = nil, ascending: Bool = true, contextType: BreezeContextType = .Main) -> Self? {
+    public class func findFirst(predicate: NSPredicate? = nil, sortedBy: String? = nil, ascending: Bool = true, contextType: BreezeContextType = .Main) -> NSManagedObject? {
         return findFirst(predicate: predicate, sortedBy: sortedBy, ascending: ascending, context: BreezeStore.contextForType(contextType))
     }
     
-    public class func findFirst(attribute: String? = nil, value: AnyObject?, context: NSManagedObjectContext) -> Self? {
+    public class func findFirst(attribute: String? = nil, value: AnyObject?, context: NSManagedObjectContext) -> NSManagedObject? {
         let predicate = predicateForAttribute(attribute, value: value)
         return findFirst(predicate: predicate, sortedBy: nil, ascending: false, context: context)
     }
     
-    public class func findFirst(predicate: NSPredicate? = nil, sortedBy: String? = nil, ascending: Bool = true, context: NSManagedObjectContext) -> Self? {
+    public class func findFirst(predicate: NSPredicate? = nil, sortedBy: String? = nil, ascending: Bool = true, context: NSManagedObjectContext) -> NSManagedObject? {
         let request = fetchRequest(predicate, sortedBy: sortedBy, ascending: ascending)
         request.fetchLimit = 1
         return BreezeStore.executeRequest(request, context: context).result.first
