@@ -14,10 +14,3 @@ FOUNDATION_EXPORT double BreezeVersionNumber;
 //! Project version string for Breeze.
 FOUNDATION_EXPORT const unsigned char BreezeVersionString[];
 
-typedef NS_ENUM(NSUInteger, BreezeContextType) {
-    BreezeContextTypeMain,
-    BreezeContextTypeBackground
-};
-
-#define BreezeCloudStoreWillReplaceLocalStore @"BreezeCloudStoreWillReplaceLocalStore"
-#define BreezeCloudStoreDidReplaceLocalStore @"BreezeCloudStoreDidReplaceLocalStore"

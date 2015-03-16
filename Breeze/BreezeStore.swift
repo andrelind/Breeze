@@ -6,8 +6,16 @@
 //  Copyright (c) 2014 André Lind. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import CoreData
+
+public enum BreezeContextType {
+    case Main
+    case Background
+}
+
+let BreezeCloudStoreWillReplaceLocalStore = "BreezeCloudStoreWillReplaceLocalStore"
+let BreezeCloudStoreDidReplaceLocalStore = "BreezeCloudStoreDidReplaceLocalStore"
 
 private var _breezeStore: BreezeStore!
 

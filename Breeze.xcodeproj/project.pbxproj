@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B4BEB4AC19972D9800FE828D /* Breeze.h in Headers */ = {isa = PBXBuildFile; fileRef = B4BEB4AB19972D9800FE828D /* Breeze.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4BEB4B619972D9800FE828D /* BreezeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4B519972D9800FE828D /* BreezeTests.swift */; };
 		B4BEB4C019972E2400FE828D /* BreezeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4BF19972E2400FE828D /* BreezeStore.swift */; };
 		B4BEB4C219972FEA00FE828D /* BreezeStore+iCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4C119972FEA00FE828D /* BreezeStore+iCloud.swift */; };
 		B4BEB4C41997697100FE828D /* BreezeStore+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4C31997697100FE828D /* BreezeStore+Defaults.swift */; };
@@ -23,9 +22,6 @@
 		B4BEB4A619972D9800FE828D /* Breeze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Breeze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4BEB4AA19972D9800FE828D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4BEB4AB19972D9800FE828D /* Breeze.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Breeze.h; sourceTree = "<group>"; };
-		B4BEB4B119972D9800FE828D /* BreezeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreezeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4BEB4B419972D9800FE828D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4BEB4B519972D9800FE828D /* BreezeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreezeTests.swift; sourceTree = "<group>"; };
 		B4BEB4BF19972E2400FE828D /* BreezeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreezeStore.swift; sourceTree = "<group>"; };
 		B4BEB4C119972FEA00FE828D /* BreezeStore+iCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BreezeStore+iCloud.swift"; sourceTree = "<group>"; };
 		B4BEB4C31997697100FE828D /* BreezeStore+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BreezeStore+Defaults.swift"; sourceTree = "<group>"; };
@@ -44,13 +40,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4BEB4AE19972D9800FE828D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				B4BEB4A819972D9800FE828D /* Breeze */,
-				B4BEB4B219972D9800FE828D /* BreezeTests */,
 				B4BEB4A719972D9800FE828D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				B4BEB4A619972D9800FE828D /* Breeze.framework */,
-				B4BEB4B119972D9800FE828D /* BreezeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,23 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				B4BEB4AA19972D9800FE828D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B4BEB4B219972D9800FE828D /* BreezeTests */ = {
-			isa = PBXGroup;
-			children = (
-				B4BEB4B519972D9800FE828D /* BreezeTests.swift */,
-				B4BEB4B319972D9800FE828D /* Supporting Files */,
-			);
-			path = BreezeTests;
-			sourceTree = "<group>";
-		};
-		B4BEB4B319972D9800FE828D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B4BEB4B419972D9800FE828D /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -146,23 +116,6 @@
 			productReference = B4BEB4A619972D9800FE828D /* Breeze.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B4BEB4B019972D9800FE828D /* BreezeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B4BEB4BC19972D9800FE828D /* Build configuration list for PBXNativeTarget "BreezeTests" */;
-			buildPhases = (
-				B4BEB4AD19972D9800FE828D /* Sources */,
-				B4BEB4AE19972D9800FE828D /* Frameworks */,
-				B4BEB4AF19972D9800FE828D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BreezeTests;
-			productName = BreezeTests;
-			productReference = B4BEB4B119972D9800FE828D /* BreezeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -173,9 +126,6 @@
 				ORGANIZATIONNAME = "André Lind";
 				TargetAttributes = {
 					B4BEB4A519972D9800FE828D = {
-						CreatedOnToolsVersion = 6.0;
-					};
-					B4BEB4B019972D9800FE828D = {
 						CreatedOnToolsVersion = 6.0;
 					};
 				};
@@ -193,20 +143,12 @@
 			projectRoot = "";
 			targets = (
 				B4BEB4A519972D9800FE828D /* Breeze */,
-				B4BEB4B019972D9800FE828D /* BreezeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B4BEB4A419972D9800FE828D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B4BEB4AF19972D9800FE828D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,14 +170,6 @@
 				B4BEB4CE1998D7DE00FE828D /* NSManagedObject+Deleting.swift in Sources */,
 				B4BEB4C41997697100FE828D /* BreezeStore+Defaults.swift in Sources */,
 				B4BEB4C019972E2400FE828D /* BreezeStore.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B4BEB4AD19972D9800FE828D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B4BEB4B619972D9800FE828D /* BreezeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,36 +294,6 @@
 			};
 			name = Release;
 		};
-		B4BEB4BD19972D9800FE828D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BreezeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		B4BEB4BE19972D9800FE828D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BreezeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -407,15 +311,6 @@
 			buildConfigurations = (
 				B4BEB4BA19972D9800FE828D /* Debug */,
 				B4BEB4BB19972D9800FE828D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B4BEB4BC19972D9800FE828D /* Build configuration list for PBXNativeTarget "BreezeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B4BEB4BD19972D9800FE828D /* Debug */,
-				B4BEB4BE19972D9800FE828D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
