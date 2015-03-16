@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4BEB4AC19972D9800FE828D /* Breeze.h in Headers */ = {isa = PBXBuildFile; fileRef = B4BEB4AB19972D9800FE828D /* Breeze.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B4BEB4C019972E2400FE828D /* BreezeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4BF19972E2400FE828D /* BreezeStore.swift */; };
 		B4BEB4C219972FEA00FE828D /* BreezeStore+iCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4C119972FEA00FE828D /* BreezeStore+iCloud.swift */; };
 		B4BEB4C41997697100FE828D /* BreezeStore+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BEB4C31997697100FE828D /* BreezeStore+Defaults.swift */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		B4BEB4A619972D9800FE828D /* Breeze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Breeze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4BEB4AA19972D9800FE828D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4BEB4AB19972D9800FE828D /* Breeze.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Breeze.h; sourceTree = "<group>"; };
 		B4BEB4BF19972E2400FE828D /* BreezeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreezeStore.swift; sourceTree = "<group>"; };
 		B4BEB4C119972FEA00FE828D /* BreezeStore+iCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BreezeStore+iCloud.swift"; sourceTree = "<group>"; };
 		B4BEB4C31997697100FE828D /* BreezeStore+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BreezeStore+Defaults.swift"; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 		B4BEB4A819972D9800FE828D /* Breeze */ = {
 			isa = PBXGroup;
 			children = (
-				B4BEB4AB19972D9800FE828D /* Breeze.h */,
 				B4BEB4BF19972E2400FE828D /* BreezeStore.swift */,
 				B4BEB4C31997697100FE828D /* BreezeStore+Defaults.swift */,
 				B4BEB4C119972FEA00FE828D /* BreezeStore+iCloud.swift */,
@@ -91,7 +88,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4BEB4AC19972D9800FE828D /* Breeze.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
