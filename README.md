@@ -11,13 +11,13 @@ Breeze takes a lot of cues from both [MagicalRecord](https://github.com/magicalp
 
 ## Install
 
-Install using Cocoapods
+Install using CocoaPods
 
     pod "Breeze"
 
 Then import <Breeze.h/Breeze.h> into your .pch file
 
-__Right now Swift does not work with Cocoapods, so download the files and include them manually... :-(__
+__Right now Swift does not work with CocoaPods, so download the files and include them manually... :-(__
 
 ## Setup
 
